@@ -5,5 +5,5 @@ for num in numbers:
         result.append(str(num))
 
 
-# print(*result, sep = ',')
+print(*result)
 print(','.join(result))
