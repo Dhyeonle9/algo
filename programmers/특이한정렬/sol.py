@@ -18,8 +18,23 @@ def solution(numlist, n):
     answer = []
 
     for num in numlist:
-        if abs(num - n) <= answer[-1]
-         answer.append(num - n)
+        if answer == []:
+
+        else:
+            for i in range(len(answer)):
+                if abs(num - n) < answer[i]:
+                    
+                    answer.insert(i, num)
+                elif abs(num - n) == answer[i]:
+                    if num > answer[i]:
+                        answer.insert(i, num)
+                    else:
+                        answer.insert(i+1, num)
+                else:
+                    answer.insert(i+1, num)
 
 
     return answer
+
+print(solution([1, 2, 3, 4, 5, 6], 4))
+print(solution([10000,20,36,47,40,6,10,7000], 30))
