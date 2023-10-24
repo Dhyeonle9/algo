@@ -13,3 +13,6 @@ for tc in range(1, T+1):
     
     print(f'#{tc} {paper[N-1]}')
 
+# 10 - 1
+# 20 - 3 
+# 30 - 11

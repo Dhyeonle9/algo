@@ -56,3 +56,4 @@ for tc in range(1, T+1):
             count +=1       
     print(f'#{tc} {count}')
 
+.gitignore : git으로 관리하지 않을 파일/디렉토리들을 파일명/디렉토리를 .gitignore 파일에 넣는다.
