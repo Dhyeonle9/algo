@@ -16,17 +16,25 @@
 #             continue               
 #     return answer
 
+# def solution(spell, dic):
+#     for i in dic:
+#         count_num = 0
+#         for j in spell:
+#             if i.count(j) == 1:
+#                 count_num += 1
+#                 print(count_num)
+#         if count_num != len(spell):
+#             continue
+#         elif count_num == len(spell):
+#             return 1
+#     return 2
 def solution(spell, dic):
-    for i in dic:
-        count_num = 0
-        for j in spell:
-            if i.count(j) == 1:
-                count_num += 1
-                print(count_num)
-        if count_num != len(spell):
-            continue
-        elif count_num == len(spell):
-            return 1
-        
-
+    for word in dic:
+        count = 0
+        for char in spell:
+            if char in word:
+                count += 1
+                if count >= len(spell):
+                    return 1                       
     return 2
+
