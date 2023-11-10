@@ -1,11 +1,8 @@
 def solution(numbers, direction):
-    answer = []
-    temp = ''
+    temp = []
     if direction == 'left':
-        temp = [numbers.pop(0)]
-        answer = numbers + temp
-        return answer
+        temp.append(numbers.pop(0))
+        return numbers + temp
     else:
-        answer.append(numbers.pop())
-        answer += numbers
-        return answer
+        temp.append(numbers.pop())
+        return temp + numbers
