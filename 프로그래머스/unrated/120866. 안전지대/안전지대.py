@@ -1,14 +1,9 @@
 def solution(board):
     answer = 0
-    n = len(board)
-    danger = [(1,1), (1,0), (1,-1), (0,1), (0,-1), (-1,1), (-1,0), (-1,-1)]
-    for i in range(n):
-        for j in range(n):
+    for i in range(len(board)):
+        for j in range(len(board[0])//2):
             if board[i][j] == 1:
-                for x, y in danger:
-                    if (0<=i+x<n and 0<=j+y<n) and board[i+x][j+y] == 0:
-                        board[i+x][j+y] = 2
-    for i in board:
-        answer += i.count(0)
-    return answer
-                        
+                if -len(board[0])//2 + 1 <= i <= len(board[0])//2 - 1 and -len(board[0])//2 + 1 <= j <= len(board[0])//2 - 1:
+                       board[i-1:i+2][j-1:j+2] = 1   
+
+    return board.count(0)
