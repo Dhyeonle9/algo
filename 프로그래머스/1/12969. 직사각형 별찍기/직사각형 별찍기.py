@@ -1,3 +1,2 @@
-m, n = map(int, input().split())
-for i in range(n):
-    print('*' * m)
+a, b = map(int, input().strip().split(' '))
+print(a + b)
