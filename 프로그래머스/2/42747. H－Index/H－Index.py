@@ -4,6 +4,4 @@ def solution(citations):
     for i in range(len(citations)):
         if i >= citations[i]:
             return i                    
-        else:
-            continue
     return len(citations)
