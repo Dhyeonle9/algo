@@ -1,7 +1,8 @@
+# def solution(nums):
+#     if len(nums)/2 >= len(set(nums)):
+#         return len(set(nums))
+#     else: 
+#         return len(nums)/2
+
 def solution(nums):
-    num = len(nums)/2
-    pos_num = len(set(nums))
-    if num >= pos_num:
-        return pos_num
-    else: 
-        return num
+    return min(len(set(nums)), len(nums)/2)
