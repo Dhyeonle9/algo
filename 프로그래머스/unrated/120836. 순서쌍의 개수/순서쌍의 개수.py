@@ -8,3 +8,6 @@ def solution(n):
 
     return answer
 
+# 한줄코드
+# def solution(array, height):
+#     return sum(1 for a in array if a > height)
