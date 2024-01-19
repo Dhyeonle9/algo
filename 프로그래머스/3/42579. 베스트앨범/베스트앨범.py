@@ -16,11 +16,14 @@ def solution(genres, plays):
             music[genres[i]].append((i, plays[i]))
         else:
             music[genres[i]] = [(i, plays[i])]
-            
+
+    # gen_dic 재생횟수순으로 장르 정렬
     gen_dic = sorted(gen_dic.items(), key=lambda x:x[1], reverse=True)            
-    
-    for k, v in gen_dic:        
-        mu = sorted(music[k], key=lambda x:x[1], reverse=True)        
+
+    for k, v in gen_dic:  
+        
+        mu = sorted(music[k], key=lambda x:x[1], reverse=True)
+        
         count = 0        
         for i in mu:
             if count >= 2:
