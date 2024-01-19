@@ -19,20 +19,12 @@ def solution(genres, plays):
             
     gen_dic = sorted(gen_dic.items(), key=lambda x:x[1], reverse=True)            
     
-    for k, v in gen_dic:
-        
-        mu = sorted(music[k], key=lambda x:x[1], reverse=True)
-        
-        print(k)
-        count = 0
+    for k, v in gen_dic:        
+        mu = sorted(music[k], key=lambda x:x[1], reverse=True)        
+        count = 0        
         for i in mu:
-            print(count)
             if count >= 2:
-                
                 break
             answer.append(i[0])
-            count += 1
-
-            
-            
+            count += 1          
     return answer
