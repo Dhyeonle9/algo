@@ -4,7 +4,5 @@
 using namespace std;
 
 int solution(string message) {
-    int answer = message.length()*2;
-    
-    return answer;
+    return message.length()*2;;
 }
